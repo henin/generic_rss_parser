@@ -1,0 +1,5 @@
+src/logs/*
+src/*.pyc
+src/*.json
+__pycache__/*
+src/__pycache__/*
