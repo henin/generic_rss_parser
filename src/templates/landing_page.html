@@ -1,0 +1,104 @@
+<html>
+<head>
+    <title>DEK Google App Engine</title>
+    <link rel="stylesheet" media="screen" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script type="text/javascript">
+            function showHideDiv(ele) {
+                var srcElement = document.getElementById(ele);
+                if (srcElement != null) {
+                    if (srcElement.style.display == "block") {
+                        srcElement.style.display = 'none';
+                    }
+                    else {
+                        srcElement.style.display = 'block';
+                    }
+                    return false;
+                }
+            }
+    </script>
+
+    <style>
+      .whitetext {
+        color: white;
+        font-weight: bold
+        font-size: 12px;
+        text-align: left;
+
+    }
+   .button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 40px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+  width: 200px
+
+}
+
+   .link_button {
+  background-color: #808080; /* Grey */
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  height: 30px;
+  width: 200px
+
+}
+
+    </style>
+
+    <style>
+
+html {
+  scroll-behavior: smooth;
+}
+    </style>
+
+</head>
+
+<body background="./static/background.png">
+<form action="/recommendation" method="post">
+    <div class="container"><br>
+        <center>
+            <h1 style="background-color: #f5f5f500; color: #f8f9fa; text-align:
+                center; font-size:40px; font-weight: bold">Articles Recommendation Engine</h1>
+        </center>
+        <br>
+        <br>
+        <br>
+        <center>
+            <br>
+            <h3 style="background-color: #f5f5f500; color: #f8f9fa; text-align:
+                center; font-size:22px; ">Select the below options</h3>
+        <br>
+        <input class="link_button" type="submit" name="recommend_articles" value="Recommend Articles">
+        <br>
+<br>
+<br>
+</form>
+<form action="/pull_feeds" method="post">
+
+    <input class="link_button" type="submit" name="pull_feeds" value="Pull Articles">
+
+    <br>
+    <br>
+    <br>
+</form>
+<form action="/", method="post">
+    <button class="button" type="submit" name="HOME PAGE" onclick="index()">HOME PAGE</button>
+
+</form>
+        </center>
+    </div>
+</body>
+</html>
