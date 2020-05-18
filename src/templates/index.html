@@ -1,0 +1,118 @@
+<html>
+
+ <head>
+             <title>Recommend Articles</title>
+     <link rel="stylesheet" media="screen" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+     <script src="http://code.jquery.com/jquery-1.10.1.min.js" ></script>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+     <script type="text/javascript">
+            function showHideDiv(ele) {
+                var srcElement = document.getElementById(ele);
+                if (srcElement != null) {
+                    if (srcElement.style.display == "block") {
+                        srcElement.style.display = 'none';
+                    }
+                    else {
+                        srcElement.style.display = 'block';
+                    }
+                    return false;
+                }
+            }
+    </script>
+
+  <style>
+      .whitetext {
+        color: white;
+        font-weight: bold
+        font-size: 12px;
+        text-align: left;
+
+    }
+   .button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 40px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  width: 200px
+
+}
+
+  </style>
+
+<style>
+
+html {
+  scroll-behavior: smooth;
+}
+</style>
+
+</head>
+
+  <body background="./static/background.png">
+<form action="/dek/recommendation" method="post">
+    <div class="container"><br>
+      <center>
+        <h1 style="background-color: #f5f5f500; color: #f8f9fa; text-align:
+                center; font-size:40px; font-weight: bold">Articles Recommendation Engine</h1>
+      </center>
+      <br>
+      <br>
+      <br>
+    </div>
+<div>
+
+        <center>
+        <br>
+        <h3 style="background-color: #f5f5f500; color: #f8f9fa; text-align:
+                center; font-size:22px; ">Select one
+                category</h3>
+        </center>
+        <br>
+        <center>
+        <input type="text" name="categories" list="categories">
+    <datalist id="categories">
+      <option value="sport">
+      <option value="politics">
+      <option value="world">
+      <option value="entertainment">
+      <option value="finance">
+      <option value="business">
+      <option value="liefstyle">
+      <option value="travel">
+      <option value="national">
+      <option value="technology">
+
+    </datalist>
+     <br>
+        <center>
+                <br>
+        <h3 style="background-color: #f5f5f500; color: #f8f9fa; text-align:
+        center; font-size:22px; "> Additional filters </h3>
+        <input type="text" name="filter_type" list="filter_type">
+        <datalist id="filter_type">
+      <option value="tags">
+      <option value="source">
+        </datalist>
+        </center>
+     <br>
+
+    <br>
+    <br>
+    <button class="button" type = "submit" name="RECOMMEND" onclick="recommendation()">RECOMMEND</button>
+    </form>
+        </center>
+        <br>
+<center>
+<form action="/", method="post">
+    <button class="button" type="submit" name="HOME PAGE" onclick="index()">HOME PAGE</button>
+    </center>
+</form>
+
+  </body>
+</html>
